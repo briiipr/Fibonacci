@@ -37,7 +37,6 @@ export class FibonacciInfoDisplayComponent implements OnInit {
     this._fibonacciService.getAllInfo().pipe(takeUntil(this.unsubscriber$)).subscribe({
       next: (response) => {
         this.requestInfoList = response;
-        console.log("LoadInfo response", response);
         this.dataSource = new MatTableDataSource(this.requestInfoList);
       },
       error: (err) => {

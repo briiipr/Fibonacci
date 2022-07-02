@@ -49,7 +49,6 @@ export class FibonacciOperationsComponent implements OnInit {
       .pipe(takeUntil(this.unsubscriber$))
       .subscribe({
         next: (response) => {
-          console.log("Response", response)
           if(response?.valueOf() > -1){
             this.fibonacciResultNumber = response;
             this._fibonacciService.refreshTable$.next(null);
