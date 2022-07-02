@@ -1,0 +1,28 @@
+<mat-card id="formCard">
+    <mat-card-header fxLayout="row" fxLayoutAlign="center center">
+      <mat-card-title>Enter a number to use as index to calculate the corresponding <a href="https://en.wikipedia.org/wiki/Fibonacci_number" target="_blank">Fibonacci number</a>!</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+        <form [formGroup]="fibonacciForm" fxLayout="column" fxLayoutAlign="space-evenly center">
+            <mat-form-field appearance="fill">
+                <mat-label>Fibonacci index number</mat-label>
+                <input type="number" matInput [min]="MIN_FIBONACCI_CALC_VALUE" placeholder="Choose an index to calculate the Fibonacci value" formControlName="inputNumber" required>
+                <mat-error *ngIf="inputNumberControl?.hasError('required')">
+                    This field is <strong>required</strong>
+                </mat-error>
+                <mat-error *ngIf="inputNumberControl?.hasError('min')">
+                    Please enter a number higher or equal to {{ MIN_FIBONACCI_CALC_VALUE }}
+                </mat-error>
+            </mat-form-field>
+        </form>
+    </mat-card-content>
+    <mat-card-actions fxLayout="row" fxLayoutAlign="center center">
+        <button mat-raised-button color="primary" (click)="submitForm()" [disabled]="!fibonacciForm.valid">Submit</button>
+    </mat-card-actions>
+    <ng-container *ngIf="fibonacciResultNumber">
+        <hr/>
+        <div class=""  fxLayout="column" fxLayoutAlign="space-evenly center">
+            <p>The corresponding Fibonacci number is: {{ fibonacciResultNumber }}</p>
+        </div>
+    </ng-container>
+</mat-card>

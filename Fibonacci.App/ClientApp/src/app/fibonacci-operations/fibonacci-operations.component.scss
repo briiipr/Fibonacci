@@ -1,0 +1,13 @@
+#formCard {
+    margin-bottom: 1em;
+
+    form {
+        mat-form-field {
+            min-width: 25rem;
+        }
+    }
+
+    mat-card-actions {
+        padding-bottom: 1rem;
+    }
+}
