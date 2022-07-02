@@ -7,6 +7,9 @@ A small C# + Angular project to request a Fibonacci number by its index.
 - Angular Material
 - LiteDB
 
+## Demo/Showcase:
+To try and see a demo, [click here](https://fibonacci-calculator.azurewebsites.net/)
+
 ## Requirements to run Fibonacci locally:
 - Visual Studio 2022
 - Nodejs & npm
@@ -21,6 +24,3 @@ A small C# + Angular project to request a Fibonacci number by its index.
 I have decided to use `Angular Material` combined with `flex` to quickly create a (mostly) responsive application, which combined with `NSwag` (automatic typescript model and http client generator), accelerates a lot the whole process.
 
 As for styling, I just wanted a simple UI and tried to be as simple as it could be, while having a respectable appearance.
-
-## Demo/Showcase:
-To try and see a demo, [click here](https://fibonacci-calculator.azurewebsites.net/)
