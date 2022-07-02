@@ -1,5 +1,4 @@
 ﻿using Fibonacci.App.Services.Interfaces;
-using Fibonacci.DataAccess.Services;
 using Fibonacci.DataAccess.Services.Interfaces;
 using Fibonacci.Domain.Models;
 using Microsoft.AspNetCore.Mvc;
